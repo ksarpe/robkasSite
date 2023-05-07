@@ -53,6 +53,7 @@ body{
 }
 .navbar{
     padding: 32px 0;
+    background-color: var(--body);
 }
 
 .nav-link{
@@ -65,8 +66,6 @@ body{
     color: var(--black);
     font-weight: bold;
 }
-
-
 
 section.hero{
     padding: 80px 0;
@@ -97,5 +96,70 @@ section.hero .text{
     font-size: 16px;
     font-weight: bold;
     line-height: 24px;
+}
+
+footer{
+    padding-top: 279px;
+    margin-bottom: 44px;
+    text-align: center;
+}
+footer a{
+    font-weight: bold;
+    font-size:14px;
+    color: var(--black);
+    line-height: 18px;
+}
+footer .copy{
+    margin-top: 32px;
+    font-size: 14px;
+    color: var(--gray-1);
+    line-height: 17px;
+}
+
+/* RESPONSIVE SECTION */
+
+@media (max-width: 766px){
+    section.hero,
+    section.setup{
+        text-align: center;
+    }
+    /* NAVBAR SECTION */
+    .navbar{
+        padding:20px 0;
+    }
+
+    .nav-link{
+        margin-left: 0;
+    }
+    /* HERO SECTION */
+    section.hero img{
+        padding-top: 2.5rem;
+    }
+
+    section.hero .text{
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 53px;
+    }
+    .buttons .btn{
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .buttons .ms-3{
+        margin-left: 0 !important;
+    }
+
+    /* SETUP SECTION */
+    section.setup{
+        padding: 50px 0;
+    }
+
+    /*FOOTER SECTION */
+    footer{
+        padding-top: 50px;
+        margin-bottom: 44px;
+    }
+
 }
 

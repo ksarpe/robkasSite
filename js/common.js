@@ -1,27 +1,3 @@
-// common.js
-// document.addEventListener("DOMContentLoaded", function() {
-//     fetch('navbar.html')
-//         .then(response => response.text())
-//         .then(navbarHtml => {
-//             document.getElementById('navbar-placeholder').innerHTML = navbarHtml;
-//             setActiveNav();
-//         });
-// });
-
-// function setActiveNav() {
-//     let currentPath = window.location.pathname;
-//     let navLinks = document.querySelectorAll('.nav-link');
-    
-//     navLinks.forEach(link => {
-//         let href = link.getAttribute('href');
-//         if (currentPath.endsWith(href)) {
-//             link.closest('.nav-item').classList.add('active');
-//         } else {
-//             link.closest('.nav-item').classList.remove('active');
-//         }
-//     });
-// }
-
 function switchLanguage(lang) {
     var elements = document.querySelectorAll('[data-' + lang + ']');
 
@@ -54,3 +30,56 @@ for (var i = 0; i < navLinks.length; i++) {
         setActiveLink(event.target);
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var navLinks = document.querySelectorAll("#navbarSupportedContent .nav-link");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        var navbarToggler = document.querySelector(".navbar-toggler");
+        var isTogglerOpen = navbarToggler.getAttribute("aria-expanded");
+
+        if (isTogglerOpen === "true") {
+          navbarToggler.click();
+        }
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // ...
+    // Include your existing code here
+    // ...
+
+    const revealSections = document.querySelectorAll('.reveal-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -200px 0px' // Adjust the value to change the trigger point
+      });
+
+    revealSections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+
+  document.querySelectorAll('.nav-link-custom').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.dataset.target);
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 50, // Adjust the offset value as needed
+          behavior: 'smooth'
+        });
+      }
+    });
+  });

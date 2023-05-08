@@ -1,0 +1,27 @@
+/* animation.css */
+.reveal-right {
+    transform: translateX(-60px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.reveal-left {
+    transform: translateX(60px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.reveal-upper {
+    transform: translateY(60px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.reveal-bottom {
+    transform: translateY(-60px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.reveal-section{
+    opacity: 0;
+}
+  
+.reveal-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+  

@@ -43,6 +43,7 @@ body{
     color: var(--black);
 }
 
+/* NAVBAR */
 .navbar .btn-outline-secondary{
     border: 1px solid var(--gray-2);
     color: var(--black);
@@ -60,6 +61,7 @@ body{
     margin-left: 41px;
     font-size: 16px;
     color: var(--gray-1);
+    cursor: pointer;
 }
 
 .navbar-nav .nav-link.active{
@@ -97,6 +99,54 @@ section.hero .text{
     font-weight: bold;
     line-height: 24px;
 }
+
+/* setup section  */
+section.setup {
+    padding: 287px 0;
+}
+
+section.setup .text-header h3{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+
+section.setup .text-header p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding: 27px 0;
+}
+
+section.setup .icons{
+    padding: 27px 0;
+}
+
+section.setup .icons img{
+    border-radius: 50%;
+}
+
+section.setup h5{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color : var(--black);
+    padding-bottom: 18px;
+}
+
+section.setup .desc p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--gray-1);
+    max-width: 284px;
+    margin: 0 auto;
+}
+
+
+/* footer section */
 
 footer{
     padding-top: 279px;
